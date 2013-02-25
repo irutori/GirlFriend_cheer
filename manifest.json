@@ -1,0 +1,28 @@
+{
+	"name": "GF cheer",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "cheer",
+	"options_page":"option.html",
+	"icons": {
+		"48": "icon48.gif"
+	},
+	"background": {
+		"page": "background.html"
+	},
+	"browser_action": {
+		"default_icon": "icon.gif"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://vcard.ameba.jp/*"
+			],
+			"js": [
+				"jquery.min.js",
+				"contentScript.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
